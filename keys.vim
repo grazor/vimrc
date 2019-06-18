@@ -1,6 +1,9 @@
 " SPC as leader
 let mapleader = " "
 
+" Clear search
+nnoremap <silent> <leader>/ :nohlsearch<cr>
+
 " Config tinkering
 nnoremap <leader>ce :edit $MYVIMRC<cr>
 nnoremap <leader>cs :source $MYVIMRC<cr>
@@ -25,6 +28,7 @@ vnoremap <leader>s y:Rg <c-r>"<cr>
 
 " Buffers, windows
 nnoremap <leader>b :Buffers<cr>
+nnoremap <f2> :Buffers<cr>
 
 " Coc specific
 nnoremap <leader>i :ImportName<cr>

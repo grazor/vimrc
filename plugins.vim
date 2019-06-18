@@ -22,6 +22,7 @@ Plug 'tpope/vim-surround'
 
 
 " VCS
+Plug 'tpope/vim-fugitive'
 
 
 call plug#end()

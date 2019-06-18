@@ -5,6 +5,13 @@ Requirements
 ```
 pacman -S neovim ctags fzf ripgrep
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo tags >> ~/.gitignore
+echo .env >> ~/.gitignore
+
+echo alias :e=nvim >> ~/.zshrc
+echo alias vim=nvim >> ~/.zshrc
+echo alias :q=exit >> ~/.zshrc
 ```
 
 

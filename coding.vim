@@ -9,10 +9,12 @@ autocmd BufWritePre *.py :CocCommand python.sortImports
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
-augroup overlength
+augroup TerminalSettings
 	autocmd!
-	autocmd BufRead *.py highlight OverLength ctermbg=red ctermfg=white
-	autocmd BufRead *.py match OverLength /\%121v.*/
+	autocmd TermOpen * setlocal nonumber norelativenumber
+	autocmd TermOpen * startinsert
+	autocmd BufEnter,BufWinEnter,WinEnter term://* startinsert
+	autocmd BufLeave term://* stopinsert
 augroup END
 
 let g:gutentags_ctags_exclude = ['*.js', '*.html', '*.json', '*.md']
