@@ -20,6 +20,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
+" Flash on yank
+Plug 'kana/vim-operator-user'
+Plug 'haya14busa/vim-operator-flashy'
+
 
 " VCS
 Plug 'tpope/vim-fugitive'

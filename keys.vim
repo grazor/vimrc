@@ -25,7 +25,6 @@ nnoremap <leader>f :GFiles<cr>
 nnoremap <leader>s :Rg 
 vnoremap <leader>s y:Rg <c-r>"<cr> 
 
-
 " Buffers, windows
 nnoremap <leader>b :Buffers<cr>
 nnoremap <f2> :Buffers<cr>
@@ -39,3 +38,7 @@ nnoremap gh :call CocActionAsync('doHover')<cr>
 " Motion
 nmap f <Plug>(easymotion-s2)
 
+" Flash on yank
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
+let g:operator#flashy#flash_time = 150
