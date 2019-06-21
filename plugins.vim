@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-endwise'
 
 " Testing
 Plug 'janko/vim-test'
