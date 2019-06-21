@@ -24,6 +24,7 @@ Plug 'junegunn/fzf.vim'
 " Editing
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
+Plug 'yuttie/comfortable-motion.vim'
 
 " Flash on yank
 Plug 'kana/vim-operator-user'

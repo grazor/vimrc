@@ -17,5 +17,7 @@
 	"python.linting.flake8Enabled": true,
 	"python.linting.pylintEnabled": false,
 	//"python.venvFolders": ["envs",".pyenv",".direnv", "venv", "env"]
-	"python.terminal.activateEnvironment": false
+	"python.terminal.activateEnvironment": false,
+
+	"git.addGlametoVirtualText": true
 }
