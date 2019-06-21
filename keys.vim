@@ -29,6 +29,9 @@ vnoremap <leader>s y:Rg <c-r>"<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <f2> :Buffers<cr>
 
+" :terminal - c-o to visual mode
+tmap <c-o> <c-\><c-n> 
+
 " Coc specific
 nnoremap <leader>i :ImportName<cr>
 nnoremap gd :call CocActionAsync('jumpDefinition')<cr>
@@ -39,6 +42,6 @@ nnoremap gh :call CocActionAsync('doHover')<cr>
 nmap f <Plug>(easymotion-s2)
 
 " Flash on yank
+let g:operator#flashy#flash_time = 150
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
-let g:operator#flashy#flash_time = 150

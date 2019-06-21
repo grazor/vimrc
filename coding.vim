@@ -18,3 +18,8 @@ augroup TerminalSettings
 augroup END
 
 let g:gutentags_ctags_exclude = ['*.js', '*.html', '*.json', '*.md']
+
+" Testing
+let test#strategy = 'neovim'
+let test#python#runner = 'pytest'
+
