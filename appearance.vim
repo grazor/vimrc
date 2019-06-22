@@ -2,19 +2,19 @@ set number
 set relativenumber
 
 function! FileNameWithIcon() abort
-  return winwidth(0) > 70  ? " " . WebDevIconsGetFileTypeSymbol() . ' ' . expand('%:.') : '' 
+	return winwidth(0) > 70  ? " " . WebDevIconsGetFileTypeSymbol() . ' ' . expand('%:.') : '' 
 endfunction
 
 function! FileNameWithParent(f) abort
-  if expand('%:t') ==# ''
-    return expand('%:p:h:t')
-  else
-    return expand('%:p:h:t') . "/" . expand("%:t")
-  endif
+	if expand('%:t') ==# ''
+		return expand('%:p:h:t')
+	else
+		return expand('%:p:h:t') . "/" . expand("%:t")
+	endif
 endfunction
 
 function! Line_num() abort
-  return string(line('.'))
+	return string(line('.'))
 endfunction
 
 function! Active_tab_num(n) abort
@@ -25,47 +25,39 @@ function! Inactive_tab_num(n) abort
   return " " . a:n . " \ue0bb "
 endfunction
 
-function! Line_percent() abort
-  return string((100*line('.'))/line('$'))
-endfunction
-
 function! Col_num() abort
     return string(getcurpos()[2])
 endfunction
 
-function! Git_branch() abort
-  if fugitive#head() !=# ''
-    return fugitive#head() .  " " . "\ue702"
-  else
-    return "\uf468"
-  endif
+function! Git_status() abort
+    return get(g:,'coc_git_status','')
 endfunction
 
 function! StatusDiagnostic() abort
-  let info = get(b:, 'coc_diagnostic_info', {})
+	let info = get(b:, 'coc_diagnostic_info', {})
 
-  if get(info, 'error', 0)
-    return "\uf46f"
-  endif
+	if get(info, 'error', 0)
+		return "\uf46f"
+	endif
 
-  if get(info, 'warning', 0)
-    return info['warning'] . "\uf421"
-  endif
+	if get(info, 'warning', 0)
+		return info['warning'] . "\uf421"
+	endif
 
   return "\uf42e" 
 endfunction
 
-function! LightlineGitBlame() abort
-  let blame = get(b:, 'coc_git_blame', '')
-  return winwidth(0) > 120 ? blame : ''
+function! BatteryLevel() abort
+	return "\uf580 " . system('acpi | grep -oP "(\d+)%" | tr -d "\n"')
 endfunction
 
+function! Time() abort
+	return "\uf64f " . strftime("%H:%M")
+endfunction
+
+" Config
 let g:lightline = {}
 let g:lightline.colorscheme = 'challenger_deep'
-let g:lightline.active = { 
-      \ 'left': [ ['mode', 'readonly'], ['filename_with_icon', 'modified' ] ],
-      \ 'right': [ ['lineinfo'], ['status_diagnostic'] ]
-      \ }
 let g:lightline.separator = { 'left': "\ue0b8", 'right': "\ue0be " }
 let g:lightline.subseparator = { 'left': "\ue0b9", 'right': "\ue0b9" }
 let g:lightline.tabline_separator = { 'left': "\ue0bc", 'right': "\ue0ba " }
@@ -74,38 +66,43 @@ let g:lightline#gitdiff#indicator_added = "\uf055 "
 let g:lightline#gitdiff#indicator_deleted = "\uf057 "
 let g:lightline#gitdiff#indicator_modified = "\uf056 "
 
-let g:lightline.tabline = {
-            \ 'left': [ [ 'vim_logo', 'tabs' ] ],
-            \ 'right': [ [ 'git_branch' ], [ 'gitdiff' ]]
-            \ }
-let g:lightline.tab = {
-        \ 'active': ['artify_activetabnum', 'filename_with_parent'],
-        \ 'inactive': ['artify_inactivetabnum', 'filename']
-        \ }
-
-let g:lightline.tab_component = {}
+" Registered components
 let g:lightline.tab_component_function = {
-            \ 'artify_activetabnum': 'Active_tab_num',
-            \ 'artify_inactivetabnum': 'Inactive_tab_num',
-            \ 'artify_filename': 'lightline_tab_filename',
-            \ 'filename': 'lightline#tab#filename',
-            \ 'modified': 'lightline#tab#modified',
-            \ 'readonly': 'lightline#tab#readonly',
-            \ 'tabnum': 'lightline#tab#tabnum',
-            \ 'filename_with_parent': 'FileNameWithParent'
-            \ }
+	\ 'artify_activetabnum': 'Active_tab_num',
+	\ 'artify_inactivetabnum': 'Inactive_tab_num',
+	\ 'artify_filename': 'lightline_tab_filename',
+	\ 'filename': 'lightline#tab#filename',
+	\ 'modified': 'lightline#tab#modified',
+	\ 'readonly': 'lightline#tab#readonly',
+	\ 'tabnum': 'lightline#tab#tabnum',
+	\ 'filename_with_parent': 'FileNameWithParent'
+	\ }
 
 let g:lightline.component = {
-        \ 'filename_with_icon': '%{FileNameWithIcon()}',
-        \ 'lineinfo': "%2{Line_percent()}\uf295 %3{Line_num()}:%-2{Col_num()}",
-        \ 'vim_logo': "\ue7c5",
-        \ 'git_branch': '%{Git_branch()}',
-	\ 'blame': '%{LightlineGitBlame()}',
-        \ 'filename_with_parent': '%t',
-        \ 'status_diagnostic': '%{StatusDiagnostic()}',
-        \ }
+	\ 'filename_with_icon': '%{FileNameWithIcon()}',
+	\ 'git_status': '%{Git_status()}',
+	\ 'status_diagnostic': '%{StatusDiagnostic()}',
+	\ 'battery': '%{BatteryLevel()}',
+	\ 'time': '%{Time()}',
+	\ }
 
 let g:lightline.component_expand = { 'gitdiff': 'lightline#gitdiff#get' }
 
 let g:lightline.component_function = {
+	\ }
+
+" Active components
+let g:lightline.tab_component = {}
+let g:lightline.active = { 
+	\ 'left': [ ['git_status'], ['filename_with_icon', 'modified'] ],
+	\ 'right': [ ['battery', 'time'], ['status_diagnostic', 'lineinfo'],  ]
+	\ }
+
+let g:lightline.tabline = {
+	\ 'left': [ [ 'vim_logo', 'tabs' ] ],
+	\ 'right': [ [ 'git_branch' ], [ 'gitdiff' ]]
+	\ }
+let g:lightline.tab = {
+        \ 'active': ['artify_activetabnum', 'filename_with_parent'],
+        \ 'inactive': ['artify_inactivetabnum', 'filename']
         \ }
