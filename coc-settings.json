@@ -18,6 +18,7 @@
 	"python.terminal.activateEnvironment": false,
 
 	"git.addGlameToVirtualText": true,
+	"coc.source.issues.enable": false,
 	"yank.highlight.enable": true
 }
 
