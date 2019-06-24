@@ -5,7 +5,9 @@ source ~/.config/nvim/battery.vim
 let g:battery#update_interval = 10000
 call battery#watch()
 function! BatteryLevel() abort
-    return "\uf580 " . g:battery
+	if exists('g:battery')
+      return "\uf580 " . g:battery
+	endif
 endfunction
 
 function! FileNameWithIcon() abort
