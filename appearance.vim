@@ -1,6 +1,13 @@
 set number
 set relativenumber
 
+source ~/.config/nvim/battery.vim
+let g:battery#update_interval = 10000
+call battery#watch()
+function! BatteryLevel() abort
+    return "\uf580 " . g:battery
+endfunction
+
 function! FileNameWithIcon() abort
     return winwidth(0) > 70  ? " " . WebDevIconsGetFileTypeSymbol() . ' ' . expand('%:.') : '' 
 endfunction
@@ -45,10 +52,6 @@ function! StatusDiagnostic() abort
     endif
 
   return "\uf42e" 
-endfunction
-
-function! BatteryLevel() abort
-    return "\uf580 " . system('acpi | grep -oP "(\d+)%" | tr -d "\n"')
 endfunction
 
 function! Time() abort
