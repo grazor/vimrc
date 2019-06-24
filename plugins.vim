@@ -31,11 +31,6 @@ Plug 'tpope/vim-surround'
 Plug 'yuttie/comfortable-motion.vim'
 
 
-" Flash on yank
-Plug 'kana/vim-operator-user'
-Plug 'haya14busa/vim-operator-flashy'
-
-
 " VCS
 Plug 'tpope/vim-fugitive'
 

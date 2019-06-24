@@ -60,14 +60,6 @@ tmap <c-o> <c-\><c-n>
 
 " Coc specific
 nnoremap <leader>i :ImportName<cr>
-nnoremap gd :call CocActionAsync('jumpDefinition')<cr>
-nnoremap gu :call CocActionAsync('jumpReferences')<cr>
-nnoremap gh :call CocActionAsync('doHover')<cr>
 
 " Motion
 nmap f <Plug>(easymotion-s2)
-
-" Flash on yank
-let g:operator#flashy#flash_time = 150
-map y <Plug>(operator-flashy)
-nmap Y <Plug>(operator-flashy)$

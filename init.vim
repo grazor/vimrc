@@ -2,7 +2,7 @@
 source ~/.config/nvim/plugins.vim
 
 " Appearance
-source ~/.config/nvim/appearance.vim
+source ~/.config/nvim/modeline.vim
 source ~/.config/nvim/themes.vim
 
 " General keys and options

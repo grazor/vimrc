@@ -42,7 +42,9 @@ function! ColorScheme()
     highlight DiffChange guibg=#ffb378 guifg=black
     highlight DiffText guibg=#ffe9aa guifg=black
   endif
+  highlight HighlightedyankRegion term=bold ctermbg=0 guibg=#1e1c31
 endfunction
+
 
 " The Defaults
 let g:VIM_COLOR_SCHEME = 'night-owl'
