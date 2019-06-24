@@ -53,6 +53,7 @@ vnoremap <leader>s y:Rg <c-r>"<cr>
 " Buffers, windows
 nnoremap <leader>b :Buffers<cr>
 nnoremap <f2> :Buffers<cr>
+nnoremap <f3> :TagbarToggle<cr>
 
 " :terminal - c-o to visual mode
 tmap <c-o> <c-\><c-n> 

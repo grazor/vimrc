@@ -8,6 +8,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'majutsushi/tagbar'
 
 
 " Testing
@@ -28,6 +29,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'yuttie/comfortable-motion.vim'
+
 
 " Flash on yank
 Plug 'kana/vim-operator-user'
