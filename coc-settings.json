@@ -17,7 +17,7 @@
 	"python.linting.pylintEnabled": false,
 	"python.terminal.activateEnvironment": false,
 
-	"git.addGlameToVirtualText": false,
+	"git.addGlameToVirtualText": true,
 	"yank.highlight.enable": true
 }
 
