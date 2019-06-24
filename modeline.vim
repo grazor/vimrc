@@ -1,6 +1,3 @@
-set number
-set relativenumber
-
 source ~/.config/nvim/battery.vim
 let g:battery#update_interval = 10000
 call battery#watch()

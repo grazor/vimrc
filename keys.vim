@@ -63,3 +63,13 @@ nnoremap <leader>i :ImportName<cr>
 
 " Motion
 nmap f <Plug>(easymotion-s2)
+
+" Git
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gb :Gblame<CR>
+
+" Copy/Paste from register
+vnoremap <leader>cc "*y
+map <leader>vv "*p
