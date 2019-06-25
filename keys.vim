@@ -49,6 +49,7 @@ nnoremap <leader>o :Files <c-r>=expand('%:h')<cr><cr>
 nnoremap <leader>f :GFiles<cr>
 nnoremap <leader>s :Rg 
 vnoremap <leader>s y:Rg <c-r>"<cr> 
+nnoremap <leader>S :Rg <up><cr>
 
 " Buffers, windows
 nnoremap <leader>b :Buffers<cr>
