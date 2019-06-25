@@ -33,6 +33,10 @@ noremap <c-j> <c-w>j
 noremap <c-k> <c-w>k
 noremap <c-l> <c-w>l
 
+" Tabs
+nnoremap <silent> <leader>t :tabnew<cr>
+nnoremap <silent> <c-i> :tabnext<cr>
+
 " disable arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
