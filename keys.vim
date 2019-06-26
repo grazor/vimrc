@@ -37,16 +37,6 @@ noremap <c-l> <c-w>l
 nnoremap <silent> <leader>t :tabnew<cr>
 nnoremap <silent> <c-i> :tabnext<cr>
 
-" disable arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
 " Open file in current dir
 nnoremap <leader>e :e <c-r>=expand('%:p:h')<cr>/
 nnoremap <leader>o :Files <c-r>=expand('%:h')<cr><cr>
@@ -56,7 +46,7 @@ vnoremap <leader>s y:Rg <c-r>"<cr>
 nnoremap <leader>S :Rg <up><cr>
 
 " Buffers, windows
-nnoremap <leader>b :Buffers<cr>
+nnoremap <leader>b <c-^>
 nnoremap <f2> :Buffers<cr>
 nnoremap <f3> :TagbarToggle<cr>
 
@@ -67,7 +57,12 @@ tmap <c-o> <c-\><c-n>
 nnoremap <leader>i :ImportName<cr>
 
 " Motion
-nmap f <Plug>(easymotion-s2)
+let g:EasyMotion_do_mapping = 0
+nmap <silent> <leader><leader> <Plug>(easymotion-s2)
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " Git
 nnoremap <leader>gs :Gstatus<CR>
@@ -78,3 +73,13 @@ nnoremap <leader>gb :Gblame<CR>
 " Copy/Paste from register
 vnoremap <leader>cc "*y
 map <leader>vv "*p
+
+" Hard time
+let g:hardtime_default_on = 1
+let g:hardtime_showmsg = 0
+let g:hardtime_maxcount = 2
+let g:hardtime_timeout = 1000
+let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_visual_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_insert_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_disabled_keys = []
