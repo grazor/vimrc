@@ -30,6 +30,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'takac/vim-hardtime'
+Plug 'bkad/CamelCaseMotion'
 
 
 " VCS
