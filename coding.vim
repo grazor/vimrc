@@ -13,6 +13,10 @@ silent !mkdir ~/.nvim/backups > /dev/null 2>&1
 set undodir=~/.nvim/backups
 set undofile
 
+" Folds
+set foldmethod=indent
+set foldlevelstart=0
+
 " Autocmds
 augroup Coding
     autocmd!

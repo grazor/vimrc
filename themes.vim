@@ -11,6 +11,14 @@ function! SwitchColorScheme(name)
   call lightline#update()
 endfunction
 
+function! ToggleConcealLevel()
+    if &conceallevel == 0
+        setlocal conceallevel=2
+    else
+        setlocal conceallevel=0
+    endif
+endfunction
+
 function! ColorScheme()
   if g:VIM_COLOR_SCHEME ==# 'palenight'
     let g:palenight_terminal_italics=1
@@ -42,10 +50,33 @@ function! ColorScheme()
     highlight DiffChange guibg=#ffb378 guifg=black
     highlight DiffText guibg=#ffe9aa guifg=black
   endif
-  highlight HighlightedyankRegion term=bold ctermbg=0 guibg=#1e1c31
+
+  syntax match pyNiceOperator "<=" conceal cchar=≤
+  syntax match pyNiceOperator ">=" conceal cchar=≥
+  syntax match pyNiceOperator "=\@<!===\@!" conceal cchar=≡
+  syntax match pyNiceOperator "!=" conceal cchar=≢
+
+  syntax keyword pyNiceOperator sum conceal cchar=∑
+
+  syntax match pyNiceOperator " \* " conceal cchar=∙
+  syntax match pyNiceOperator " / " conceal cchar=÷
+  " The following are special cases where it /may/ be okay to ignore PEP8
+  syntax match pyNiceOperator "\( \|\)\*\*\( \|\)2\>" conceal cchar=²
+  syntax match pyNiceOperator "\( \|\)\*\*\( \|\)3\>" conceal cchar=³
+  syntax match pyNiceOperator "\( \|\)\*\*\( \|\)n\>" conceal cchar=ⁿ
+
+  syntax keyword pyNiceStatement lambda conceal cchar=λ
+
+  highlight link pyNiceOperator Operator
+  highlight! link Conceal Operator
+
+  setlocal conceallevel=1
+  setlocal concealcursor=inc
 endfunction
 
 
 " The Defaults
 let g:VIM_COLOR_SCHEME = 'night-owl'
 :call SwitchColorScheme('night-owl')
+
+nnoremap <silent> <C-c><C-y> :call ToggleConcealLevel()<CR>
