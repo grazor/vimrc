@@ -48,3 +48,7 @@ let test#python#runner = 'pytest'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" Gitlab
+let g:fugitive_gitlab_domains = [$GITLAB_URL]
+let g:gitlab_api_keys = {$GITLAB_URL: $GITLAB_TOKEN}

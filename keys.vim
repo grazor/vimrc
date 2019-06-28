@@ -84,6 +84,16 @@ nnoremap <leader>gb :Gblame<CR>
 vnoremap <leader>cc "*y
 map <leader>vv "*p
 
+" Clipboard
+vnoremap <leader>y "+y
+nnoremap <leader>y "+y
+nnoremap <leader>Y "+yg_
+
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
 " Hard time
 let g:hardtime_default_on = 1
 let g:hardtime_showmsg = 0

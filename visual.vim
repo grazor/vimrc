@@ -9,4 +9,3 @@ set showtabline=1
 
 set showbreak=↪\ 
 set listchars=eol:¬,extends:❯,precedes:❮
-

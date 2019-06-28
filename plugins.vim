@@ -9,6 +9,7 @@ Plug 'tpope/vim-endwise'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
+Plug 'Yggdroot/indentLine'
 
 
 " Testing
@@ -35,6 +36,7 @@ Plug 'bkad/CamelCaseMotion'
 
 " VCS
 Plug 'tpope/vim-fugitive'
+Plug 'shumphrey/fugitive-gitlab.vim'
 
 
 " Modeline
