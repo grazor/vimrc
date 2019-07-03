@@ -56,8 +56,6 @@ function! ColorScheme()
   syntax match pyNiceOperator "=\@<!===\@!" conceal cchar=≡
   syntax match pyNiceOperator "!=" conceal cchar=≢
 
-  syntax keyword pyNiceOperator sum conceal cchar=∑
-
   syntax match pyNiceOperator " \* " conceal cchar=∙
   syntax match pyNiceOperator " / " conceal cchar=÷
   " The following are special cases where it /may/ be okay to ignore PEP8
@@ -66,9 +64,9 @@ function! ColorScheme()
   syntax match pyNiceOperator "\( \|\)\*\*\( \|\)n\>" conceal cchar=ⁿ
 
   syntax keyword pyNiceStatement lambda conceal cchar=λ
+  syntax keyword pyNiceStatement sum conceal cchar=∑
 
-  highlight link pyNiceOperator Operator
-  highlight! link Conceal Operator
+  highlight link pyNiceStatement Keyword
 
   setlocal conceallevel=1
   setlocal concealcursor=inc
@@ -77,6 +75,6 @@ endfunction
 
 " The Defaults
 let g:VIM_COLOR_SCHEME = 'night-owl'
-:call SwitchColorScheme('night-owl')
+call SwitchColorScheme('night-owl')
 
 nnoremap <silent> <C-c><C-y> :call ToggleConcealLevel()<CR>
