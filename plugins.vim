@@ -30,8 +30,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'takac/vim-hardtime'
 Plug 'bkad/CamelCaseMotion'
+Plug 'scrooloose/nerdcommenter'
 
 
 " VCS

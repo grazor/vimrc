@@ -35,7 +35,6 @@ noremap <c-l> <c-w>l
 
 " Tabs
 nnoremap <silent> <leader>t :tabnew<cr>
-nnoremap <silent> <c-i> :tabnext<cr>
 
 " Open file in current dir
 nnoremap <leader>e :e <c-r>=expand('%:p:h')<cr>/
@@ -48,12 +47,13 @@ nnoremap <leader>S :Rg <up><cr>
 " Buffers, windows
 nnoremap <leader>b <c-^>
 nnoremap <f2> :Buffers<cr>
+
 nnoremap <f3> :TagbarToggle<cr>
 
 " :terminal - c-o to visual mode
 tmap <c-o> <c-\><c-n> 
 
-" Coc specific
+" Python specific
 nnoremap <leader>i :ImportName<cr>
 
 " Motion
@@ -69,6 +69,7 @@ map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
 map <silent> ge <Plug>CamelCaseMotion_ge
+
 sunmap w
 sunmap b
 sunmap e
@@ -80,10 +81,6 @@ nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gb :Gblame<CR>
 
-" Copy/Paste from register
-vnoremap <leader>cc "*y
-map <leader>vv "*p
-
 " Clipboard
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
@@ -93,13 +90,3 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
-
-" Hard time
-let g:hardtime_default_on = 0
-let g:hardtime_showmsg = 0
-let g:hardtime_maxcount = 2
-let g:hardtime_timeout = 1000
-let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
-let g:list_of_visual_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
-let g:list_of_insert_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
-let g:list_of_disabled_keys = []
