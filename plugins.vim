@@ -32,6 +32,7 @@ Plug 'tpope/vim-surround'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'bkad/CamelCaseMotion'
 Plug 'scrooloose/nerdcommenter'
+Plug 'Shougo/denite.nvim'
 
 
 " VCS

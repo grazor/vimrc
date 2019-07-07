@@ -9,6 +9,7 @@ source ~/.config/nvim/visual.vim
 " General keys and options
 source ~/.config/nvim/behavior.vim
 source ~/.config/nvim/keys.vim
+source ~/.config/nvim/denite.vim
 source ~/.config/nvim/coc.vim
 
 " Coding
