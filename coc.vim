@@ -81,6 +81,3 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
 nmap <leader>qf  <Plug>(coc-fix-current)
 
-" Yank
-nnoremap <silent> <leader><leader>p  :<C-u>CocList -A --normal yank<cr>
-

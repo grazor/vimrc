@@ -9,7 +9,7 @@ nnoremap <silent> <leader>/ :nohlsearch<cr>
 
 " Config tinkering
 nnoremap <leader>ce :edit $MYVIMRC<cr>
-nnoremap <leader>cs :source $MYVIMRC<cr>
+nnoremap <leader>cr :source $MYVIMRC<cr>
 
 
 " JK for normal only
@@ -90,3 +90,6 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+" Yank history
+nnoremap <silent> <leader>hp  :<C-u>CocList -A --normal yank<cr>
