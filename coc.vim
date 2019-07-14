@@ -1,5 +1,5 @@
 " Global plugins settings
-let g:coc_global_extensions = ['coc-python', 'coc-git', 'coc-ultisnips', 'coc-json', 'coc-highlight', 'coc-yank']
+let g:coc_global_extensions = ['coc-python', 'coc-git', 'coc-ultisnips', 'coc-json', 'coc-highlight', 'coc-yank', 'coc-tsserver', 'coc-eslint', 'coc-prettier']
 
 " if hidden is not set, TextEdit might fail.
 set hidden

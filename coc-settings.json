@@ -19,6 +19,8 @@
 
 	"git.addGlameToVirtualText": true,
 	"coc.source.issues.enable": false,
-	"yank.highlight.enable": true
+	"yank.highlight.enable": true,
+	"coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact"],
+	"eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact"]
 }
 
