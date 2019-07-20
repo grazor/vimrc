@@ -15,19 +15,25 @@ set undofile
 
 " Folds
 set foldmethod=indent
-set foldlevelstart=0
+set foldlevelstart=99
 
 " Autocmds
 augroup Coding
     autocmd!
-    " Coding
+    " Python
     autocmd BufNewFile,BufRead *.py
 	    \ set tabstop=4 softtabstop=4 shiftwidth=4 |
 	    \ set textwidth=0 expandtab autoindent fileformat=unix
     autocmd BufWritePre *.py :call CocAction('format')
     autocmd BufWritePre *.py :CocCommand python.sortImports
+
+	" Other
+    autocmd BufNewFile,BufRead *.js
+	    \ set tabstop=2 softtabstop=2 shiftwidth=2 |
+	    \ set textwidth=0 expandtab autoindent fileformat=unix
     autocmd FileType json syntax match Comment +\/\/.\+$+
     autocmd FileType vim set tabstop=4 softtabstop=4 shiftwidth=4
+
     " disable paste mode when leaving Insert mode
     autocmd InsertLeave * set nopaste
     " check if buffer was changed outside of vim
