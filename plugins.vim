@@ -12,6 +12,7 @@ Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'markonm/traces.vim'
 Plug 'vimwiki/vimwiki'
+Plug 'PeterRincker/vim-argumentative'
 
 
 " Testing
