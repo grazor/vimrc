@@ -11,6 +11,7 @@ Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'markonm/traces.vim'
+Plug 'vimwiki/vimwiki'
 
 
 " Testing
@@ -33,6 +34,7 @@ Plug 'tpope/vim-surround'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'bkad/CamelCaseMotion'
 Plug 'scrooloose/nerdcommenter'
+Plug 'godlygeek/tabular'
 
 
 " VCS

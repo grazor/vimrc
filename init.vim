@@ -13,3 +13,4 @@ source ~/.config/nvim/coc.vim
 
 " Coding
 source ~/.config/nvim/coding.vim
+source ~/.config/nvim/wiki.vim
