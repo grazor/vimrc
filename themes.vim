@@ -50,26 +50,6 @@ function! ColorScheme()
     highlight DiffChange guibg=#ffb378 guifg=black
     highlight DiffText guibg=#ffe9aa guifg=black
   endif
-
-  syntax match pyNiceOperator "<=" conceal cchar=≤
-  syntax match pyNiceOperator ">=" conceal cchar=≥
-  syntax match pyNiceOperator "=\@<!===\@!" conceal cchar=≡
-  syntax match pyNiceOperator "!=" conceal cchar=≢
-
-  syntax match pyNiceOperator " \* " conceal cchar=∙
-  syntax match pyNiceOperator " / " conceal cchar=÷
-  " The following are special cases where it /may/ be okay to ignore PEP8
-  syntax match pyNiceOperator "\( \|\)\*\*\( \|\)2\>" conceal cchar=²
-  syntax match pyNiceOperator "\( \|\)\*\*\( \|\)3\>" conceal cchar=³
-  syntax match pyNiceOperator "\( \|\)\*\*\( \|\)n\>" conceal cchar=ⁿ
-
-  syntax keyword pyNiceStatement lambda conceal cchar=λ
-  syntax keyword pyNiceStatement sum conceal cchar=∑
-
-  highlight link pyNiceStatement Keyword
-
-  setlocal conceallevel=1
-  setlocal concealcursor=inc
 endfunction
 
 
@@ -78,3 +58,26 @@ let g:VIM_COLOR_SCHEME = 'night-owl'
 call SwitchColorScheme('night-owl')
 
 nnoremap <silent> <C-c><C-y> :call ToggleConcealLevel()<CR>
+
+" Conceal
+syntax match pyNiceOperator "<=" conceal cchar=≤
+syntax match pyNiceOperator ">=" conceal cchar=≥
+syntax match pyNiceOperator "=\@<!===\@!" conceal cchar=≡
+syntax match pyNiceOperator "!=" conceal cchar=≢
+
+syntax match pyNiceOperator " \* " conceal cchar=∙
+syntax match pyNiceOperator " / " conceal cchar=÷
+" The following are special cases where it /may/ be okay to ignore PEP8
+syntax match pyNiceOperator "\( \|\)\*\*\( \|\)2\>" conceal cchar=²
+syntax match pyNiceOperator "\( \|\)\*\*\( \|\)3\>" conceal cchar=³
+syntax match pyNiceOperator "\( \|\)\*\*\( \|\)n\>" conceal cchar=ⁿ
+
+syntax keyword pyNiceStatement lambda conceal cchar=λ
+syntax keyword pyNiceStatement sum conceal cchar=∑
+
+highlight link pyNiceStatement Keyword
+
+set conceallevel=1
+let g:indentLine_conceallevel = 1
+set concealcursor=nvc
+let g:indentLine_concealcursor = 'nvc'

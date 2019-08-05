@@ -14,10 +14,6 @@ Plug 'markonm/traces.vim'
 Plug 'vimwiki/vimwiki'
 
 
-" Testing
-Plug 'janko/vim-test'
-
-
 " Python
 Plug 'mgedmin/python-imports.vim'
 
