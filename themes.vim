@@ -77,7 +77,7 @@ syntax keyword pyNiceStatement sum conceal cchar=∑
 
 highlight link pyNiceStatement Keyword
 
-set conceallevel=1
-let g:indentLine_conceallevel = 1
+set conceallevel=2
+let g:indentLine_conceallevel = 2
 set concealcursor=nvc
 let g:indentLine_concealcursor = 'nvc'
