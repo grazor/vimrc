@@ -17,7 +17,7 @@
 	"python.linting.pylintEnabled": false,
 	"python.terminal.activateEnvironment": false,
 
-	"git.addGlameToVirtualText": true,
+	"git.addGBlameToVirtualText": true,
 	"coc.source.issues.enable": false,
 	"yank.highlight.enable": true,
 	"coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact"],

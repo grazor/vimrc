@@ -3,7 +3,7 @@
 Requirements
 
 ```
-pacman -S neovim python-neovim ctags fzf ripgrep
+pacman -S neovim python-neovim ctags fzf ripgrep nodejs
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo tags >> ~/.gitignore
