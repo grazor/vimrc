@@ -1,8 +1,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-
 " Coding general
-Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+"Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise'
@@ -37,6 +37,7 @@ Plug 'godlygeek/tabular'
 " VCS
 Plug 'tpope/vim-fugitive'
 Plug 'shumphrey/fugitive-gitlab.vim'
+Plug 'tpope/vim-rhubarb'
 
 
 " Modeline

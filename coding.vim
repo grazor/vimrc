@@ -38,6 +38,10 @@ augroup Coding
     autocmd InsertLeave * set nopaste
     " check if buffer was changed outside of vim
     autocmd FocusGained,BufEnter * checktime
+
+	" go imports
+	command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+	autocmd BufWritePre *.go :OR
 augroup END
 
 augroup TerminalSettings
