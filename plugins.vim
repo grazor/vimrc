@@ -13,6 +13,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'markonm/traces.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'PeterRincker/vim-argumentative'
+Plug 'kshenoy/vim-signature'
 
 
 " Python

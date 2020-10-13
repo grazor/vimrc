@@ -39,8 +39,14 @@ augroup Coding
     " check if buffer was changed outside of vim
     autocmd FocusGained,BufEnter * checktime
 
+<<<<<<< Updated upstream
+	" go imports
+	command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+	autocmd BufWritePre *.go :OR
+=======
 	command! -nargs=0 OIMPORTS :call CocAction('runCommand', 'editor.action.organizeImport')
 	autocmd BufWritePre *.go :OIMPORTS
+>>>>>>> Stashed changes
 augroup END
 
 augroup TerminalSettings

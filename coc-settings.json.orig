@@ -1,4 +1,8 @@
 {
+<<<<<<< Updated upstream
+  "diagnostic.joinMessageLines":true,
+=======
+>>>>>>> Stashed changes
   "diagnostic.checkCurrentLine": true,
   "diagnostic.warningSign": "",
   "diagnostic.errorSign": "",
@@ -9,7 +13,10 @@
 
   "python.jediEnabled": false,
   "python.formatting.provider": "black",
+<<<<<<< Updated upstream
+=======
   "python.formatting.blackArgs": ["--line-length", "119"],
+>>>>>>> Stashed changes
   "python.linting.flake8Args": [
     "--max-line-length",
     "120",
@@ -23,7 +30,10 @@
 
   "git.addGBlameToVirtualText": true,
   "coc.source.issues.enable": false,
+<<<<<<< Updated upstream
+=======
   "coc.preferences.rootPatterns": [".git", ".env"],
+>>>>>>> Stashed changes
   "yank.highlight.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
@@ -31,9 +41,13 @@
     "typescriptreact",
     "json",
     "javascriptreact",
+<<<<<<< Updated upstream
     "golang",
     "go",
     "sql"
+=======
+    "go"
+>>>>>>> Stashed changes
   ],
   "eslint.filetypes": [
     "javascript",
@@ -42,10 +56,13 @@
     "javascriptreact"
   ],
 
+<<<<<<< Updated upstream
+=======
   "go.goplsOptions": {
     "completeUnimported": true,
     "staticcheck": true
   },
+>>>>>>> Stashed changes
   "go.disable": {
     "workspaceFolders": false
   }
