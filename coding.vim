@@ -24,8 +24,8 @@ augroup Coding
     autocmd BufNewFile,BufRead *.py
 	    \ set tabstop=4 softtabstop=4 shiftwidth=4 |
 	    \ set textwidth=0 expandtab autoindent fileformat=unix
-    autocmd BufWritePre *.py :call CocAction('format')
-    autocmd BufWritePre *.py :CocCommand python.sortImports
+    " autocmd BufWritePre *.py :call CocAction('format')
+    " autocmd BufWritePre *.py :CocCommand python.sortImports
 
 	" Other
     autocmd BufNewFile,BufRead *.js
@@ -33,6 +33,11 @@ augroup Coding
 	    \ set textwidth=0 expandtab autoindent fileformat=unix
     autocmd FileType json syntax match Comment +\/\/.\+$+
     autocmd FileType vim set tabstop=4 softtabstop=4 shiftwidth=4
+
+	" Go
+    autocmd BufNewFile,BufRead *.go
+	    \ set tabstop=4 softtabstop=4 shiftwidth=4 |
+	    \ set textwidth=0 autoindent fileformat=unix
 
     " disable paste mode when leaving Insert mode
     autocmd InsertLeave * set nopaste

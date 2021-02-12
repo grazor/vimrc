@@ -19,7 +19,6 @@ Plug 'kshenoy/vim-signature'
 " Python
 Plug 'mgedmin/python-imports.vim'
 
-
 " Filesystem
 Plug 'tpope/vim-eunuch'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
