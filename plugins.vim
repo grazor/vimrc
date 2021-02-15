@@ -12,9 +12,15 @@ Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'markonm/traces.vim'
 Plug 'vimwiki/vimwiki'
-Plug 'PeterRincker/vim-argumentative'
+"Plug 'PeterRincker/vim-argumentative'
+Plug 'AndrewRadev/sideways.vim'
 Plug 'kshenoy/vim-signature'
 
+" Visual
+"Plug 'camspiers/animate.vim'
+Plug 'camspiers/lens.vim'
+"Plug 'blueyed/vim-diminactive'
+Plug 'jaxbot/semantic-highlight.vim'
 
 " Python
 Plug 'mgedmin/python-imports.vim'

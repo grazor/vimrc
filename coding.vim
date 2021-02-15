@@ -17,6 +17,18 @@ set undofile
 set foldmethod=indent
 set foldlevelstart=99
 
+" Func args editing
+nnoremap <, :SidewaysLeft<cr>
+nnoremap >, :SidewaysRight<cr>
+nmap <a <Plug>SidewaysArgumentInsertBefore
+nmap >a <Plug>SidewaysArgumentAppendAfter
+nmap <A <Plug>SidewaysArgumentInsertFirst
+nmap >A <Plug>SidewaysArgumentAppendLast
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
+
 " Autocmds
 augroup Coding
     autocmd!
@@ -63,6 +75,7 @@ let test#strategy = 'neovim'
 let test#python#runner = 'pytest'
 
 " Snippets
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/snippets"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
