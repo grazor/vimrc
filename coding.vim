@@ -75,10 +75,10 @@ let test#strategy = 'neovim'
 let test#python#runner = 'pytest'
 
 " Snippets
-let g:UltiSnipsSnippetsDir = "~/.config/nvim/snippets"
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
 
 " Gitlab
 let g:fugitive_gitlab_domains = [$GITLAB_URL]
