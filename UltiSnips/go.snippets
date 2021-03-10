@@ -25,6 +25,11 @@ snippet ap= "a = append(a, value)"
 ${1:slice} = append($1, ${0:value})
 endsnippet
 
+# breakpoint
+snippet bp "breakpoint"
+runtime.Breakpoint()
+endsnippet
+
 # break
 snippet br "break"
 break
