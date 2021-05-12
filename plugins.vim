@@ -15,6 +15,7 @@ Plug 'vimwiki/vimwiki'
 "Plug 'PeterRincker/vim-argumentative'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'kshenoy/vim-signature'
+Plug 'caenrique/nvim-toggle-terminal'
 
 " Visual
 "Plug 'camspiers/animate.vim'

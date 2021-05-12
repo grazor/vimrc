@@ -40,9 +40,12 @@ nnoremap <silent> <leader>t :tabnew<cr>
 nnoremap <leader>e :e <c-r>=expand('%:p:h')<cr>/
 nnoremap <leader>o :Files <c-r>=expand('%:h')<cr><cr>
 nnoremap <leader>f :GFiles<cr>
+
 nnoremap <leader>s :Rg 
 vnoremap <leader>s y:Rg <c-r>"<cr> 
 nnoremap <leader>S :Rg <up><cr>
+
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden -- ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
 " Buffers, windows
 nnoremap <leader>b <c-^>
