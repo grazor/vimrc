@@ -6,7 +6,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
@@ -58,5 +58,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'challenger-deep-theme/vim', {'name': 'challenger-deep'}
 Plug 'haishanh/night-owl.vim'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'mhartington/oceanic-next'
 
 call plug#end()

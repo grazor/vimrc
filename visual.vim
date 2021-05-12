@@ -20,7 +20,7 @@ let g:lens#height_resize_max = 30
 
 highlight ColorColumn ctermbg=0 guibg=#001122
 
-autocmd BufNewFile,BufRead *.go SemanticHighlightToggle
+"autocmd BufNewFile,BufRead *.go SemanticHighlightToggle
 nnoremap <Leader>l :SemanticHighlightToggle<cr>
 
 
